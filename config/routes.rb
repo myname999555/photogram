@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get('fotos/new', {:controller => 'fotos', :action => 'new'})
+  get('mathcats/new', {:controller => 'fotos', :action => 'new'})
 
-  get('fotos/:random', {:controller => 'fotos', :action => 'random'})
+  get('mathcats/:random', {:controller => 'fotos', :action => 'random'})
 
-  get('fotodetails/:id', {:controller => 'fotos', :action => 'show'})
+  get('mathcatsdetails/:id', {:controller => 'fotos', :action => 'show'})
 
-  get('/create_foto', {:controller => 'fotos', :action => 'create'})
+  get('/create_mathkittens', {:controller => 'fotos', :action => 'create'})
 
-  get('/fotoslist', {:controller => 'fotos', :action => 'index'})
+  get('/mathcats_hall_of_fame', {:controller => 'fotos', :action => 'index'})
 
-  get('/fotosremove/:id', {:controller => 'fotos', :action => 'remove'})
+  get('/removebadmathcats/:id', {:controller => 'fotos', :action => 'remove'})
 
-  get('/edit_ur_foto/:id', {:controller => 'fotos', :action => 'edit'})
+  get('/trade_your_mathcat_for_a_new_one/:id', {:controller => 'fotos', :action => 'edit'})
 
-  get('/update_foto/:id', {:controller => 'fotos', :action => 'update'})
+  get('/give_your_mathcat_some_better_stuff/:id', {:controller => 'fotos', :action => 'update'})
 
 end

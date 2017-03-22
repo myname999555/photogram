@@ -1,23 +1,34 @@
-<h1>!Ad fotos (sory abot mi bed gramer) heer¡</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
 
-<form class="" action="/create_foto">
-<label for="image_url"><h2>!imaje uarel¡</h2></label>
-<input type="text" id ="image_url" name="image_url" value="">
-<input type="submit" name="subbmett" value="">
-<label for="image_url"><h2>?yourlimage¿</h2></label>
-<input type="text" id ="image_url" name="caption" value="">
-<input type="submit" name="subbmett" value="">
-</form>
+      <h1>!Ad fotos (sory abot mi bed gramer) heer¡</h1>
+      <br><br>
+      <form class="form-inline" action="/create_mathkittens">
+        <div class="form-group">
+          <label for="image_url">!imaje uarel¡</label>
+          <input type="text" class="form-control" id="image_url" name="image_url">
+        </div>
+        <div class="form-group">
+          <label for="caption">?yourlimage¿</label>
+          <input type="text" class="form-control" id="caption" name="caption">
+        </div>
+        <button type="submit" class="btn btn-default">subbmett</button>
+      </form>
 
 
-<h1>Heer r the lst of fotos</h1>
+      <h1>Heer r the lst of fotos</h1>
 
-<ul>
-<% @list_of_all_the_fotos.each do |number_of_the_foto_you_are_on| %>
-  <li>
-    <img src="<%= number_of_the_foto_you_are_on.image_url %>" width=500 alt="">
-    <a href="/fotosremove/<%=number_of_the_foto_you_are_on.id%>">remove</a>
-    <a href="/edit_ur_foto/<%=number_of_the_foto_you_are_on.id%>">edit</a>
-  </li>
-<% end %>
-</ul>
+      <ul>
+      <% @list_of_all_the_fotos.each do |number_of_the_foto_you_are_on| %>
+        <li>
+          <img src="<%= number_of_the_foto_you_are_on.image_url %>" width=750 alt="">
+          <a href="/removebadmathcats/<%=number_of_the_foto_you_are_on.id%>">remove</a>
+          <a href="/trade_your_mathcat_for_a_new_one/<%=number_of_the_foto_you_are_on.id%>">edit</a>
+        </li>
+      <% end %>
+      </ul>
+
+    </div>
+  </div>
+</div>

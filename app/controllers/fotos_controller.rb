@@ -30,7 +30,7 @@ class FotosController < ApplicationController
     f.image_url=params['image_url']
     f.caption=params['caption']
     f.save
-    redirect_to "/fotodetails/#{f.id}"
+    redirect_to "/mathcatsdetails/#{f.id}"
   end
 
 
@@ -43,7 +43,7 @@ class FotosController < ApplicationController
   def remove
       @foto=Foto.find(params['id'])
       @foto.destroy
-      redirect_to "/fotoslist"
+      redirect_to "/mathcats_hall_of_fame"
   end
 
 
@@ -58,7 +58,7 @@ class FotosController < ApplicationController
     f.image_url=params['image_url']
     f.caption=params['caption']
     f.save
-    redirect_to "/fotodetails/#{f.id}"
+    redirect_to "/mathcatsdetails/#{f.id}"
   end
 
 end
