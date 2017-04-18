@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+ background: url(/Actual_Tiles.jpg);
+ background-repeat: repeat;
+ }
+
+.panel{
+  margin-top: 150px;
+}

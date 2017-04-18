@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-9 col-md-offset-2">
 
       <h1>!Ad fotos (sory abot mi bed gramer) heer¡</h1>
       <br><br>
@@ -16,18 +16,26 @@
         <button type="submit" class="btn btn-default">subbmett</button>
       </form>
 
-
       <h1>Heer r the lst of fotos</h1>
 
-      <ul>
+
       <% @list_of_all_the_fotos.each do |number_of_the_foto_you_are_on| %>
-        <li>
+
+
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Smart mathcats</h3>
+        </div>
+        <div class="panel-body">
           <img src="<%= number_of_the_foto_you_are_on.image_url %>" width=750 alt="">
-          <a href="/removebadmathcats/<%=number_of_the_foto_you_are_on.id%>">remove</a>
-          <a href="/trade_your_mathcat_for_a_new_one/<%=number_of_the_foto_you_are_on.id%>">edit</a>
-        </li>
+          <br><br><br><br>
+          <a class="btn btn-danger" href="/removebadmathcats/<%=number_of_the_foto_you_are_on.id%>">Find out that your mathcat had cheated and take it of the hall of fame</a>
+          <a class="btn btn-warning" href="/trade_your_mathcat_for_a_new_one/<%=number_of_the_foto_you_are_on.id%>">take a new picture of the mathcat</a>
+          <a class="btn btn-primary" href="/Start_Bragging_about_your_awesome_mathcat/<%=number_of_the_foto_you_are_on.id%>">brag about your mathcat</a>
+        </div>
+      </div>
+
       <% end %>
-      </ul>
 
     </div>
   </div>

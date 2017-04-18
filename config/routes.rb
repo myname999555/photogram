@@ -16,4 +16,10 @@ Rails.application.routes.draw do
 
   get('/give_your_mathcat_some_better_stuff/:id', {:controller => 'fotos', :action => 'update'})
 
+  get('/Brag_about_your_awesome_mathcats_to_other_dumb_cats/:id', {:controller => 'comments', :action => 'show'})
+
+  get('/Start_Bragging_about_your_awesome_mathcat/:id', {:controller => 'comments', :action => 'new'})
+
+  get('/New_Kinds_of_Ways_to_Brag', {:controller => 'comments', :action => 'create'})
+
 end
