@@ -32,6 +32,13 @@
           <a class="btn btn-danger" href="/removebadmathcats/<%=number_of_the_foto_you_are_on.id%>">Find out that your mathcat had cheated and take it of the hall of fame</a>
           <a class="btn btn-warning" href="/trade_your_mathcat_for_a_new_one/<%=number_of_the_foto_you_are_on.id%>">take a new picture of the mathcat</a>
           <a class="btn btn-primary" href="/Start_Bragging_about_your_awesome_mathcat/<%=number_of_the_foto_you_are_on.id%>">brag about your mathcat</a>
+          <br><br>
+          <ul class="list-group">
+            <% comments = Comment.where(:foto_id => number_of_the_foto_you_are_on.id) %>
+            <% comments.each do |comment| %>
+              <li class="list-group-item"> <%= comment.text %> </li>
+            <% end %>
+          </ul>
         </div>
       </div>
 
